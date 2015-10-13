@@ -330,7 +330,7 @@ public class BarcodeCaptureActivity extends AppCompatActivity {
                 Intent data = new Intent();
                 data.putExtra(MainActivity.BarcodeObject, barcode);
                 setResult(CommonStatusCodes.SUCCESS, data);
-                Log.d("DEBUG", barcode.displayValue + " value to activity");
+                Log.d("Barcode: ", barcode.displayValue);
                 finish();
             }
             else {

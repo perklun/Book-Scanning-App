@@ -203,11 +203,10 @@ public class MainActivity extends ActionBarActivity implements NavigationDrawerF
         if(requestCode == BARCODE_REQUEST) {
             if (resultCode == CommonStatusCodes.SUCCESS) {
                 Barcode b = (Barcode) data.getParcelableExtra(BarcodeObject);
-                Log.d("DEBUG", b.displayValue + " value");
                 AddBook fragmentAddBook = (AddBook)
                         getSupportFragmentManager().findFragmentById(R.id.container);
                 fragmentAddBook.onBarcodeScanned(b.displayValue);
-                Log.d("DEBUG", b.displayValue + " value");
+
             }
         }
     }
